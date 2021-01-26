@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Hello World</title>
+    <link>https://haohao1010.github.io/tags/About/</link>
+    <description>Recent content in About on Hello World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 24 Jan 2021 14:51:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://haohao1010.github.io/tags/About/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://haohao1010.github.io/about/</link>
+      <pubDate>Wed, 22 Apr 2020 09:54:08 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/about/</guid>
+      <description>Now I am a mediocre student. I don&amp;rsquo;t have a high GPA, I don&amp;rsquo;t have much industrial practice, and I haven&amp;rsquo;t even stepped through the door of academia.
+There was a time when I fantasized about being one of those brilliant and romantic geniuses. I always wanted to be part of these people&amp;rsquo;s circle, and I liked that atmosphere.
+I longed to have a mentor who could help me. I know that this requires me to be good enough, which is a prerequisite.
+Github: https://github.com/haohao1010
+Twitter: https://twitter.com/haohao1010</description>
+    </item>
+    
+  </channel>
+</rss>

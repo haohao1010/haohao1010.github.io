@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hello World</title>
+    <link>https://haohao1010.github.io/</link>
+    <description>Recent content on Hello World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 22 Apr 2020 09:54:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://haohao1010.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What Kind of a Person Am I</title>
+      <link>https://haohao1010.github.io/post/what-kind-of-a-person-am-I/</link>
+      <pubDate>Sun, 24 Jan 2021 14:51:56 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/post/what-kind-of-a-person-am-I/</guid>
+      <description>What kind of a person am I ?
+It has always been habitual to wrap up in disguise in front of others, not wanting them to see that bad self. These disguises, layer upon layer, to the point that now, even I can not recognize myself.
+The actual fact is that you can find a lot of people who are not able to get the best out of the company. The same is true of the students around you, but they don&amp;rsquo;t seem to be as depressed as I am, or perhaps everyone is used to hiding it.
+This is the first time that I&amp;rsquo;ve been thinking about what I really want, and whether I&amp;rsquo;m really lost.</description>
+    </item>
+    
+    <item>
+      <title>Java Study Notes for Beginners</title>
+      <link>https://haohao1010.github.io/post/java-study-notes-for-beginners/</link>
+      <pubDate>Tue, 19 Jan 2021 14:22:14 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/post/java-study-notes-for-beginners/</guid>
+      <description>Java 数组 int[] a = new int[3]; int[] a = new int[]{1, 2, 3}; int[] a = {1,2,3} 冒泡排序算法 for(int i = 0; i &amp;lt; arr.length - 1; i ++) { // 每趟确定一个元素的最终位置 for(int j = 0; j &amp;lt; arr.length - i - 1; j ++) { if(arr[j] &amp;gt; arr[j+1]) { tmp = arr[j]; arr[j] = arr[j+1]; arr[j+1] = tmp; } } } Java 字符串 String str = &amp;#34;abc&amp;#34;; // 字符串是常量，它们的</description>
+    </item>
+    
+    <item>
+      <title>2020 Year End Reflection</title>
+      <link>https://haohao1010.github.io/post/2020-year-end-reflection/</link>
+      <pubDate>Wed, 13 Jan 2021 13:38:40 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/post/2020-year-end-reflection/</guid>
+      <description>2021 年已经过去 13 天了。 这篇总结已经被我拖了小半个月。准确的说，是逃避。逃避考研的失败，逃避别人的目光，逃避内心的自己。 今年是近 4 年来，经历事情最多的 1 年，也是最为充实的 1 年。 1 月中旬，我正式着手准备考研</description>
+    </item>
+    
+    <item>
+      <title>Introductory Notes on Compilation Principles</title>
+      <link>https://haohao1010.github.io/post/compilation-principle/</link>
+      <pubDate>Mon, 11 Jan 2021 08:55:00 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/post/compilation-principle/</guid>
+      <description>编译原理 这个文档是伴随着我开发 mendax 编程语言而写的，所以会插入部分和编译原理无关的知识。 所谓的编译原理，就是让计算机理解更高级的语言并执行。将问题抽象化处理，若仅局限于低级机器语言，则很难产生面向对象和函</description>
+    </item>
+    
+    <item>
+      <title>Timeline</title>
+      <link>https://haohao1010.github.io/timeline/</link>
+      <pubDate>Wed, 22 Apr 2020 09:54:18 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/timeline/</guid>
+      <description>[2021.1.6] Hello World.
+[2021.1.17] When I came home, the pace of learning was too slow. And the situation I&amp;rsquo;m currently in doesn&amp;rsquo;t allow me to slow down. After thinking about it, I decided to record my study life every day here, which is another form of supervision.
+[2021.1.18] The plan to devote the first day to study was thwarted on this morning by mental desire. I wasted two hours, felt guilty and hated myself.
+[&amp;hellip; 11:21] Was a Java unit test of an engineering problem to get a big head, the java ecology is still not familiar with ah.
+[&amp;hellip; 14:36] In the long journey of life, a momentary failure is nothing; it is a crucial time to draw sustenance.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://haohao1010.github.io/about/</link>
+      <pubDate>Wed, 22 Apr 2020 09:54:08 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/about/</guid>
+      <description>Now I am a mediocre student. I don&amp;rsquo;t have a high GPA, I don&amp;rsquo;t have much industrial practice, and I haven&amp;rsquo;t even stepped through the door of academia.
+There was a time when I fantasized about being one of those brilliant and romantic geniuses. I always wanted to be part of these people&amp;rsquo;s circle, and I liked that atmosphere.
+I longed to have a mentor who could help me. I know that this requires me to be good enough, which is a prerequisite.
+Github: https://github.com/haohao1010
+Twitter: https://twitter.com/haohao1010</description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://haohao1010.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://haohao1010.github.io/search/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

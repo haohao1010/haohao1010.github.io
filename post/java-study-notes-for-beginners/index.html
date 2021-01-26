@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Java Study Notes for Beginners | Hello World</title>
+  <meta property="og:title" content="Java Study Notes for Beginners - Hello World" />
+  <meta property="og:type" content="article" />
+  
+  <meta
+    property="article:published_time"
+    content='2021-01-19T14:22:14&#43;08:00'
+  />
+   
+  <meta
+    property="article:modified_time"
+    content='2021-01-19T14:22:14&#43;08:00'
+  />
+  
+  <meta
+    name="Keywords"
+    content=""
+  />
+  <meta
+    name="description"
+    content="Java Study Notes for Beginners"
+  />
+  
+  <meta name="author" content="haohao1010" />
+  <meta property="og:url" content="https://haohao1010.github.io/post/java-study-notes-for-beginners/" />
+  <link
+    rel="shortcut icon"
+    href="https://novcode.oss-cn-beijing.aliyuncs.com/favicon-doc.png"
+    type="image/x-icon"
+  />
+
+  <link rel="stylesheet" href='/css/normalize.css' />
+  <link rel="stylesheet" href='/css/style.css' />
+  <script
+    type="text/javascript"
+    src="https://novcode.oss-cn-beijing.aliyuncs.com/jquery.min.js"
+  ></script>
+
+  
+
+  
+  
+</head>
+
+  <body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://haohao1010.github.io">
+                        Hello World
+                    </a>
+                
+                <p class="description">Personal blog</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://haohao1010.github.io">Home</a>
+                    
+                    <a  href="https://haohao1010.github.io/about/" title="About">About</a>
+                    
+                    <a  href="https://haohao1010.github.io/timeline/" title="TimeLine">TimeLine</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+      <div class="container">
+        <div class="col-group">
+          <div class="col-8" id="main">
+<div class="res-cons">
+  
+
+  <article class="post">
+    <header>
+      <h1 class="post-title">Java Study Notes for Beginners</h1>
+    </header>
+    <date class="post-meta meta-date">
+      2021年1月19日
+    </date>
+    
+    <div class="post-meta">
+      <span>|</span>
+      
+      <span class="meta-category"
+        ><a href='https://haohao1010.github.io/categories/Java'
+          >Java</a
+        ></span
+      >
+      
+    </div>
+      
+    <div class="post-content"><h2 id="java-数组">Java 数组</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#2b91af">int</span>[] a = <span style="color:#00f">new</span> <span style="color:#2b91af">int</span>[3];
+<span style="color:#2b91af">int</span>[] a = <span style="color:#00f">new</span> <span style="color:#2b91af">int</span>[]{1, 2, 3};
+<span style="color:#2b91af">int</span>[] a = {1,2,3}
+
+</code></pre></div><p>冒泡排序算法</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = 0; i &lt; arr.length - 1; i ++) {
+    <span style="color:#008000">// 每趟确定一个元素的最终位置
+</span><span style="color:#008000"></span>    <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> j = 0; j &lt; arr.length - i - 1; j ++) { 
+        <span style="color:#00f">if</span>(arr[j] &gt; arr[j+1]) {
+            tmp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = tmp;
+        }
+        
+    }
+}
+
+</code></pre></div><h2 id="java-字符串">Java 字符串</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+String str = <span style="color:#a31515">&#34;abc&#34;</span>;  <span style="color:#008000">// 字符串是常量，它们的值不能被创建后改变
+</span><span style="color:#008000"></span>
+<span style="color:#008000">// 等价
+</span><span style="color:#008000"></span><span style="color:#2b91af">char</span> str[] = {<span style="color:#a31515">&#39;a&#39;</span>, <span style="color:#a31515">&#39;b&#39;</span>, <span style="color:#a31515">&#39;c&#39;</span>};
+String str = <span style="color:#00f">new</span> String(str);
+
+</code></pre></div><h2 id="java-多态">Java 多态</h2>
+<p>1、多态的三个必要条件：继承；重写；向上转型。</p>
+<p>2、</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#00f">public</span> <span style="color:#00f">class</span> <span style="color:#2b91af">A</span> {
+
+}
+
+<span style="color:#00f">public</span> <span style="color:#00f">class</span> <span style="color:#2b91af">B</span> <span style="color:#00f">extends</span> A {
+
+}
+
+A a = <span style="color:#00f">null</span>;  <span style="color:#008000">// 声明一个对象（例如员工对象）
+</span><span style="color:#008000"></span>a = <span style="color:#00f">new</span> B(参数1, 参数2);  <span style="color:#008000">// 向上转型，例如创建一个技术员工对象（子类）
+</span><span style="color:#008000"></span>
+<span style="color:#008000">// 参数1, 参数2 直接传入 B 的构造方法
+</span><span style="color:#008000"></span>
+<span style="color:#00f">super</span>(参数);  <span style="color:#008000">// 在调用父类的构造方法时，传入该参数
+</span><span style="color:#008000"></span>
+<span style="color:#00f">super</span>.func();  <span style="color:#008000">// 调用父类的构造方法
+</span><span style="color:#008000"></span>
+</code></pre></div><h2 id="java-抽象类和接口">Java 抽象类和接口</h2>
+<p>1、万物皆对象，所有的对象都是借助于类来描绘的。但是反过来讲，也不是说所有的类都是用来描绘对象的。如果一个类中并没有包含足够的信息来描绘一个具体的对象，那么这样的类称为抽象类。</p>
+<p>2、抽象类是从多个类中抽象出来的模板，如果将这种抽象进行的更彻底，则可以提炼出一种更加特殊的“抽象类” —— 接口。</p>
+<p>3、抽象类的相关代码实现</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#00f">public</span> <span style="color:#00f">abstract</span> <span style="color:#00f">class</span> <span style="color:#2b91af">Animal</span>{
+    <span style="color:#008000">// Define abstract method
+</span><span style="color:#008000"></span>    <span style="color:#00f">public</span> <span style="color:#00f">abstract</span> <span style="color:#2b91af">void</span> shout();
+}
+
+<span style="color:#00f">public</span> <span style="color:#00f">class</span> <span style="color:#2b91af">Cat</span> <span style="color:#00f">extends</span> Animal() {
+    @Override
+    <span style="color:#00f">public</span> <span style="color:#2b91af">void</span> shout() {
+        System.out.println(<span style="color:#a31515">&#34;Hello World&#34;</span>);
+    }
+}
+
+<span style="color:#00f">public</span> <span style="color:#00f">class</span> <span style="color:#2b91af">Test</span> {
+    <span style="color:#00f">public</span> <span style="color:#00f">static</span> <span style="color:#2b91af">void</span> main(Sting[] args) {
+        <span style="color:#008000">// Abstract classes cannot be instantiated
+</span><span style="color:#008000"></span>        <span style="color:#008000">// Animal animal = new Animal();
+</span><span style="color:#008000"></span>        Animal animal = <span style="color:#00f">new</span> Cat();
+    }
+}
+
+</code></pre></div><p>4、抽象类的语法约束</p>
+<p>（1）抽象类不能背包实例化，也就是不能用 new 关键字去产生对象。</p>
+<p>（2）抽象类中不一定包含抽象方法。</p>
+<p>（3）抽象类中的抽象方法只是声明，并不给出方法的具体实现（功能）。</p>
+<p>（4）构造方法和用 static 修饰的方法不能声明为抽象方法。</p>
+<p>（5）抽象类的子类必须给出抽象类中的抽象方法的具体实现，但是若该子类也是抽象类，则不必如此。</p>
+<p>（6）子类继承父类（抽象类）时，必须重写父类的所有抽象方法。</p>
+<p>5、接口的代码实现</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#00f">public</span> <span style="color:#00f">interface</span> <span style="color:#2b91af">USB</span> {
+    <span style="color:#2b91af">int</span> L = 10;
+    <span style="color:#2b91af">int</span> W = 24;
+    <span style="color:#2b91af">void</span> service();
+}
+
+<span style="color:#00f">public</span> <span style="color:#00f">class</span> <span style="color:#2b91af">UDisk</span> <span style="color:#00f">implements</span> USB {
+    pubic <span style="color:#2b91af">void</span> service() {
+        System.out.println(<span style="color:#a31515">&#34;Hello World&#34;</span>);
+    }
+}
+
+<span style="color:#008000">// 默认
+</span><span style="color:#008000"></span>[修饰符] <span style="color:#00f">interface</span> <span style="color:#2b91af">接口名</span> {
+    [<span style="color:#00f">public</span>] [<span style="color:#00f">static</span>] [<span style="color:#00f">final</span>] 数据类型 常量名 = 常量值;
+    [<span style="color:#00f">public</span>] [<span style="color:#00f">abstract</span>] 返回值类型 方法名 ([参数列表]);
+    [<span style="color:#00f">public</span>] <span style="color:#00f">default</span> 返回值类型 方法名 ([参数列表]) {};
+    [<span style="color:#00f">public</span>] <span style="color:#00f">static</span> 返回值类型 方法名 ([参数列表]) {};
+}
+
+<span style="color:#00f">public</span> <span style="color:#00f">interface</span> <span style="color:#2b91af">B</span> {
+    <span style="color:#00f">public</span> <span style="color:#00f">default</span> <span style="color:#2b91af">void</span> c(){};
+}
+
+<span style="color:#00f">public</span> <span style="color:#00f">class</span> <span style="color:#2b91af">A</span> <span style="color:#00f">implements</span> B {
+
+} 
+
+<span style="color:#008000">// 向上转型
+</span><span style="color:#008000"></span>B b = <span style="color:#00f">new</span> A();
+b.c();
+
+</code></pre></div><p>6、接口的语法约束</p>
+<p>（1）当类实现接口的时候，类要实现接口中的所有抽象方法。否则，必须把这个声明为抽象类。</p>
+<p>（2）允许一个类实现多个接口。</p>
+<p>（3）接口中的方法除了包含抽象方法外，还包含默认方法和静态方法，默认方法和静态方法都可以拥有方法体。并且，静态方法可以直接通过 “接口.方法名” 来调用。因为接口同样不能被实例化。</p>
+<p>关于默认方法：简单说，默认方法就是接口可以有实现方法，而且不需要实现类去实现其方法。我们即只需在方法名前面加个 default 关键字即可实现默认方法。</p>
+<p>（4）一个类在继承一个类的同时，还可以实现接口。但是，此时 extends 关键字必须位于 implements 关键字之前。</p>
+<p>7、为什么 Java 制定了接口？</p>
+<p>接口的出现可以很好的解决 Java 不支持多重继承的问题。多重继承指的是一个类可以同时继承多个类，比如A类继承自B类和C类。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#00f">public</span> <span style="color:#00f">class</span> <span style="color:#2b91af">a</span> <span style="color:#00f">implements</span> b,c
+
+</code></pre></div><p>8、抽象类和接口的不同</p>
+<p>（1）抽象类中可以定义构造方法，接口中不能定义构造方法。</p>
+<p>（2）接口中的成员全都是 public。</p>
+<p>（3）抽象类中可以定义成员变量，接口中定义的成员变量实际上都是常量（只能被赋值一次，常量多大写）。</p>
+<p>（4）一个类只能继承一个抽象类，一个类可以实现多个接口。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="java-常用-api">Java 常用 API</h2>
+<p>1、API：Application Programming Interface.</p>
+<p>2、使用 String 对象存储字符串</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+String s = <span style="color:#00f">new</span> String(<span style="color:#a31515">&#34;amber&#34;</span>);
+
+s.length();  <span style="color:#008000">// 获取字符串的长度
+</span><span style="color:#008000"></span>
+s.equals(<span style="color:#a31515">&#34;ambow&#34;</span>);  <span style="color:#008000">// 比较存储在两个字符串对象中的内容是否一致
+</span><span style="color:#008000"></span>
+s.concat(str)  <span style="color:#008000">// 将一个字符串连接到另一个字符串后
+</span><span style="color:#008000"></span>
+s.toUpperCase()  <span style="color:#008000">// 将字符串中的所有字符全部转换成大写
+</span><span style="color:#008000"></span>
+s.toLowerCase()  <span style="color:#008000">// 将字符串中的所有字符全部转换成小写
+</span><span style="color:#008000"></span>
+s.trim()  <span style="color:#008000">// 去除字符串中首尾的空格
+</span><span style="color:#008000"></span>
+s.substring(0,1); s.substring(1);  <span style="color:#008000">// 提取字符串
+</span><span style="color:#008000"></span>
+s.replace(<span style="color:#a31515">&#34;source&#34;</span>, <span style="color:#a31515">&#34;target&#34;</span>);  <span style="color:#008000">// 替换字符串
+</span><span style="color:#008000"></span>
+s.indexOf(<span style="color:#a31515">&#34;select&#34;</span>);  <span style="color:#008000">// 用于返回字符串中在指定字符中首次出现的索引位置，若能找到，则返回索引值，否则返回 -1
+</span><span style="color:#008000"></span>
+<span style="color:#008000">// StringBuffer 是线程安全的
+</span><span style="color:#008000"></span>StringBuffer str = <span style="color:#00f">new</span> StringBuffer(<span style="color:#a31515">&#34;HelloWorld&#34;</span>);
+StringBuffer str = <span style="color:#00f">new</span> StringBuffer();
+Scanner input = <span style="color:#00f">new</span> Scanner(System.in);
+str.append(input.next());
+
+StringBuilder str = <span style="color:#00f">new</span> StringBuilder(<span style="color:#a31515">&#34;HelloWorld&#34;</span>);
+StringBuilder str = <span style="color:#00f">new</span> StringBuilder();
+str.toString();  <span style="color:#008000">// 转换为 String 类型
+</span><span style="color:#008000"></span>str.append();  <span style="color:#008000">// 追加字符串
+</span><span style="color:#008000"></span>str.insert(0,<span style="color:#a31515">&#34;str&#34;</span>);  <span style="color:#008000">// 插入字符串
+</span><span style="color:#008000"></span>
+</code></pre></div><h4 id="equal-方法和--的差别">equal() 方法和 == 的差别？</h4>
+<p>在引用数据类型中， == 的作用用于比较其内存地址，而 equal() 方法用于比较其内容。</p>
+<p><img src="https://haohao1010.oss-cn-beijing.aliyuncs.com/pics/03.png" alt=""></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+String str1 = <span style="color:#a31515">&#34;mendax&#34;</span>;  <span style="color:#008000">// 引用，指针指向同一个地址
+</span><span style="color:#008000"></span>String str2 = <span style="color:#a31515">&#34;mendax&#34;</span>;
+String str3 = <span style="color:#00f">new</span> String(<span style="color:#a31515">&#34;mendax&#34;</span>);
+String str4 = <span style="color:#00f">new</span> String(<span style="color:#a31515">&#34;mendax&#34;</span>);
+
+<span style="color:#008000">// 结果
+</span><span style="color:#008000"></span>str1 == str2
+str1 != str3
+str3 != str4
+
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+Date date = <span style="color:#00f">new</span> Date();
+DateFormat dateFormat = <span style="color:#00f">new</span> SimpleDateFormat(<span style="color:#a31515">&#34;yyyy-MM&#34;</span>);
+String time = dateFormat.format(date);
+
+String str = Integer.toString(x);  <span style="color:#008000">// 整型转换成字符串
+</span><span style="color:#008000"></span>Striing str = x + <span style="color:#a31515">&#34;&#34;</span>;  <span style="color:#008000">// 整型转换成字符串
+</span><span style="color:#008000"></span><span style="color:#2b91af">int</span> x = Integer.parseInt(str);  <span style="color:#008000">// 字符串转化成整型
+</span><span style="color:#008000"></span><span style="color:#2b91af">double</span> x = Double.parseDouble(str);  <span style="color:#008000">// 字符串转化成double类型
+</span><span style="color:#008000"></span>
+<span style="color:#008000">// 自动拆箱
+</span><span style="color:#008000"></span>Integer x = <span style="color:#00f">new</span> Integer(1024);
+<span style="color:#2b91af">int</span> y = x;
+
+<span style="color:#008000">// 自动装箱
+</span><span style="color:#008000"></span><span style="color:#2b91af">int</span> x = 1024;
+Integer y = x;
+
+</code></pre></div><h2 id="集合框架快速入门">集合框架快速入门</h2>
+<p>1、Java 集合类型有 Collection 和 Map。Collection 有 List（ArrayList、LinkedList） 和 Set（HashSet、TreeSet）。Map 有HashMap和TreeMap。</p>
+<p>2、List 接口存储一组不唯一、有序的对象。Set 接口存储一组唯一、无序的对象。例如向 Set 集合中添加两个相同的元素，而后添加的元素会覆盖前面添加的元素，即在 Set 集合中不会出现相同的元素。</p>
+<p>3、ArrayList 实现了长度可变的数组，在内存中分配连续的空间。LinkList采用链表存储方式。</p>
+<p>4、HashSet 是按照 Hash 算法来存取集合中的元素，因此具有很好的存取和查找性能。除此之外，不保证元素的排列顺序，现排列顺序可能与添加顺序不同，现排列顺序也有可能会发生变化。HashSet 是不同步的，如果多个线程同时访问或修改一个 HashSet，则必须通过代码来保证其同步。</p>
+<p>5、Map 是一种键值集合，用于保存具有映射关系的数据。HashMap 同样不保证顺序。键不允许重复，但是值可以重复。若存入了两个相同的键，则保存最后一个存入的键值对。</p>
+<p>6、泛型本质上是提供类型的“类型参数”，也就是参数化类型。泛型集合可以约束集合内的元素类型。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+T<span style="">：</span>代表这是一个类型 Type
+E<span style="">：</span>代表这是一个元素 Element
+K<span style="">：</span>代表这是一个键 Key
+V<span style="">：</span>代表这是一个值 Value
+
+</code></pre></div><h2 id="java-文件流">Java 文件流</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#008000">// 图片拷贝
+</span><span style="color:#008000"></span>
+<span style="color:#00f">import</span> java.io.*
+
+File srcPath = <span style="color:#00f">new</span> File(<span style="color:#a31515">&#34;srcPath&#34;</span>);
+File destPath = <span style="color:#00f">new</span> File(<span style="color:#a31515">&#34;destPath&#34;</span>);
+FileInputStream fis = <span style="color:#00f">new</span> FileInputStream(srcPath);
+FileOutputStram fos = <span style="color:#00f">new</span> FileOutputStream(destPath);
+Byte[] bt = <span style="color:#00f">new</span> Byte[1024];
+<span style="color:#00f">while</span>(fis.read(bt) != -1) {
+    fos.writer(fos);
+}
+fos.close;
+fis.close;
+
+<span style="color:#008000">// 文件写入
+</span><span style="color:#008000"></span>
+<span style="color:#00f">import</span> java.io.*
+
+File f = <span style="color:#00f">new</span> File(<span style="color:#a31515">&#34;Path&#34;</span>);
+FileOutputStream fop = <span style="color:#00f">new</span> FileOutputStream(f);
+OutputStreamWriter writer = <span style="color:#00f">new</span> OutputStreamWriter(fop);
+writer.append(<span style="color:#a31515">&#34;Hello WOrld.&#34;</span>);
+writer.close();
+fop.close();
+
+</code></pre></div><h3 id="未完待续">@未完待续&hellip;&hellip;</h3>
+</div>
+
+    
+  
+<div class="post-archive">
+  <h2>See Also</h2>
+  <ul class="listing">
+    
+    <li><a href="/post/2020-year-end-reflection/">2020 Year End Reflection</a></li>
+    
+    <li><a href="/post/compilation-principle/">Introductory Notes on Compilation Principles</a></li>
+    
+    <li><a href="/timeline/">Timeline</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/search/">Search</a></li>
+    
+  </ul>
+</div>
+
+
+
+    <div class="post-meta meta-tags">
+      
+      <ul class="clearfix">
+        
+        <li>
+          <a href='https://haohao1010.github.io/tags/Java'>Java</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </article>
+   
+
+
+
+
+</div>
+</div>
+          <div id="secondary">
+  <section class="widget"><form
+  id="search"
+  action='https://haohao1010.github.io/search/'
+  method="get"
+  accept-charset="utf-8"
+  target="_blank"
+  _lpchecked="1"
+>
+  
+  <input type="text" name="q" maxlength="20" placeholder="Search" />
+  <input type="hidden" name="sitesearch" value="https://haohao1010.github.io" />
+  <button type="submit" class="submit icon-search"></button>
+</form>
+</section>
+
+  <section class="widget"><h3 class="widget-title">Recent Articles</h3>
+<ul class="widget-list">
+  
+  <li>
+    <a href="https://haohao1010.github.io/post/what-kind-of-a-person-am-I/" title="What Kind of a Person Am I">What Kind of a Person Am I</a>
+  </li>
+  
+  <li>
+    <a href="https://haohao1010.github.io/post/java-study-notes-for-beginners/" title="Java Study Notes for Beginners">Java Study Notes for Beginners</a>
+  </li>
+  
+  <li>
+    <a href="https://haohao1010.github.io/post/2020-year-end-reflection/" title="2020 Year End Reflection">2020 Year End Reflection</a>
+  </li>
+  
+  <li>
+    <a href="https://haohao1010.github.io/post/compilation-principle/" title="Introductory Notes on Compilation Principles">Introductory Notes on Compilation Principles</a>
+  </li>
+  
+</ul>
+</section>
+
+  
+
+
+  <section class="widget"><h3 class="widget-title">Classification</h3>
+<ul class="widget-list">
+  
+  <li><a href="https://haohao1010.github.io/categories/About-Life/">About Life (2)</a></li>
+  
+  <li><a href="https://haohao1010.github.io/categories/Compilation-Principle/">Compilation Principle (1)</a></li>
+  
+  <li><a href="https://haohao1010.github.io/categories/Java/">Java (1)</a></li>
+  
+</ul>
+</section>
+
+  <section class="widget"><h3 class="widget-title">Tags</h3>
+<div class="tagcloud">
+  
+  <a href="https://haohao1010.github.io/tags/About/">About</a>
+  
+  <a href="https://haohao1010.github.io/tags/About-Life/">About Life</a>
+  
+  <a href="https://haohao1010.github.io/tags/Compilation-Principle/">Compilation Principle</a>
+  
+  <a href="https://haohao1010.github.io/tags/Java/">Java</a>
+  
+  <a href="https://haohao1010.github.io/tags/TimeLine/">TimeLine</a>
+  
+</div>
+</section>
+
+  
+
+
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+  <div class="container">
+    &copy; 2021
+    <a href="https://haohao1010.github.io"
+      >Hello World By haohao1010</a
+    >. Powered by
+    <a
+      rel="nofollow noreferer noopener"
+      href="https://gohugo.io"
+      target="_blank"
+      >Hugo</a
+    >.
+    
+    
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  window.MathJax = {
+    tex2jax: {
+      inlineMath: [["$", "$"]],
+      processEscapes: true,
+    },
+  };
+</script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+  async
+></script>
+
+
+<a id="rocket" href="#top"></a>
+<script
+  type="text/javascript"
+  src='/js/totop.js?v=0.0.0'
+  async=""
+></script>
+ 
+
+
+
+
+  </body>
+</html>

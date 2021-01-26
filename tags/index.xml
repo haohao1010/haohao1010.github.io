@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Hello World</title>
+    <link>https://haohao1010.github.io/tags/</link>
+    <description>Recent content in Tags on Hello World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 24 Jan 2021 14:51:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://haohao1010.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://haohao1010.github.io/tags/About/</link>
+      <pubDate>Sun, 24 Jan 2021 14:51:56 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/tags/About/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About Life</title>
+      <link>https://haohao1010.github.io/tags/About-Life/</link>
+      <pubDate>Sun, 24 Jan 2021 14:51:56 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/tags/About-Life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://haohao1010.github.io/tags/Java/</link>
+      <pubDate>Tue, 19 Jan 2021 14:22:14 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/tags/Java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Compilation Principle</title>
+      <link>https://haohao1010.github.io/tags/Compilation-Principle/</link>
+      <pubDate>Mon, 11 Jan 2021 08:55:00 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/tags/Compilation-Principle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TimeLine</title>
+      <link>https://haohao1010.github.io/tags/TimeLine/</link>
+      <pubDate>Wed, 22 Apr 2020 09:54:18 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/tags/TimeLine/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

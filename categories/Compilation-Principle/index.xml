@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Compilation Principle on Hello World</title>
+    <link>https://haohao1010.github.io/categories/Compilation-Principle/</link>
+    <description>Recent content in Compilation Principle on Hello World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 11 Jan 2021 08:55:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://haohao1010.github.io/categories/Compilation-Principle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introductory Notes on Compilation Principles</title>
+      <link>https://haohao1010.github.io/post/compilation-principle/</link>
+      <pubDate>Mon, 11 Jan 2021 08:55:00 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/post/compilation-principle/</guid>
+      <description>编译原理 这个文档是伴随着我开发 mendax 编程语言而写的，所以会插入部分和编译原理无关的知识。 所谓的编译原理，就是让计算机理解更高级的语言并执行。将问题抽象化处理，若仅局限于低级机器语言，则很难产生面向对象和函</description>
+    </item>
+    
+  </channel>
+</rss>

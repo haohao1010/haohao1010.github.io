@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Hello World</title>
+    <link>https://haohao1010.github.io/tags/Java/</link>
+    <description>Recent content in Java on Hello World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 19 Jan 2021 14:22:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://haohao1010.github.io/tags/Java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java Study Notes for Beginners</title>
+      <link>https://haohao1010.github.io/post/java-study-notes-for-beginners/</link>
+      <pubDate>Tue, 19 Jan 2021 14:22:14 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/post/java-study-notes-for-beginners/</guid>
+      <description>Java 数组 int[] a = new int[3]; int[] a = new int[]{1, 2, 3}; int[] a = {1,2,3} 冒泡排序算法 for(int i = 0; i &amp;lt; arr.length - 1; i ++) { // 每趟确定一个元素的最终位置 for(int j = 0; j &amp;lt; arr.length - i - 1; j ++) { if(arr[j] &amp;gt; arr[j+1]) { tmp = arr[j]; arr[j] = arr[j+1]; arr[j+1] = tmp; } } } Java 字符串 String str = &amp;#34;abc&amp;#34;; // 字符串是常量，它们的</description>
+    </item>
+    
+  </channel>
+</rss>

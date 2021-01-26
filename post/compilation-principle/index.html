@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Introductory Notes on Compilation Principles | Hello World</title>
+  <meta property="og:title" content="Introductory Notes on Compilation Principles - Hello World" />
+  <meta property="og:type" content="article" />
+  
+  <meta
+    property="article:published_time"
+    content='2021-01-11T08:55:00&#43;08:00'
+  />
+   
+  <meta
+    property="article:modified_time"
+    content='2021-01-11T08:55:00&#43;08:00'
+  />
+  
+  <meta
+    name="Keywords"
+    content=""
+  />
+  <meta
+    name="description"
+    content="Introductory Notes on Compilation Principles"
+  />
+  
+  <meta name="author" content="haohao1010" />
+  <meta property="og:url" content="https://haohao1010.github.io/post/compilation-principle/" />
+  <link
+    rel="shortcut icon"
+    href="https://novcode.oss-cn-beijing.aliyuncs.com/favicon-doc.png"
+    type="image/x-icon"
+  />
+
+  <link rel="stylesheet" href='/css/normalize.css' />
+  <link rel="stylesheet" href='/css/style.css' />
+  <script
+    type="text/javascript"
+    src="https://novcode.oss-cn-beijing.aliyuncs.com/jquery.min.js"
+  ></script>
+
+  
+
+  
+  
+</head>
+
+  <body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://haohao1010.github.io">
+                        Hello World
+                    </a>
+                
+                <p class="description">Personal blog</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://haohao1010.github.io">Home</a>
+                    
+                    <a  href="https://haohao1010.github.io/about/" title="About">About</a>
+                    
+                    <a  href="https://haohao1010.github.io/timeline/" title="TimeLine">TimeLine</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+      <div class="container">
+        <div class="col-group">
+          <div class="col-8" id="main">
+<div class="res-cons">
+  
+
+  <article class="post">
+    <header>
+      <h1 class="post-title">Introductory Notes on Compilation Principles</h1>
+    </header>
+    <date class="post-meta meta-date">
+      2021年1月11日
+    </date>
+    
+    <div class="post-meta">
+      <span>|</span>
+      
+      <span class="meta-category"
+        ><a href='https://haohao1010.github.io/categories/Compilation-Principle'
+          >Compilation Principle</a
+        ></span
+      >
+      
+    </div>
+      
+    <div class="post-content"><h2 id="编译原理">编译原理</h2>
+<p>这个文档是伴随着我开发 mendax 编程语言而写的，所以会插入部分和编译原理无关的知识。</p>
+<p>所谓的编译原理，就是让计算机理解更高级的语言并执行。将问题抽象化处理，若仅局限于低级机器语言，则很难产生面向对象和函数式等编程思想。以此可以给人提供更好的思考方式。</p>
+<p>面向对象：面向对象编程——Object Oriented Programming，简称OOP，是一种程序设计思想。OOP把对象作为程序的基本单元，一个对象包含了数据和操作数据的函数。</p>
+<p>函数式(参考自阮一峰老师的网络日志)：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+数学表达式<span style="">：</span>(1 + 2) * 3 - 4
+
+面向过程<span style="">：</span>
+
+<span style="color:#00f">var</span> a = 1 + 2;
+<span style="color:#00f">var</span> b = a * 3;
+<span style="color:#00f">var</span> c = b - 4;
+
+函数式<span style="">：</span>
+
+<span style="color:#00f">var</span> result = subtract(multiply(add(1,2),3),4);
+
+</code></pre></div><h2 id="词法分析">词法分析</h2>
+<p>程序的源代码最初只是一长串字符串。从内部来看，源代码中的换行也能用专门的(不可见)换行符表示，因此整个源代码是一种相连的长字符串。这样的长字符串很难处理，语言处理器通常会首先将字符串中的字符以单词为单位分组，切割成多个子字符串。这就是词法分析。就像是去除了程序中无用的内容，筛选出了有价值的信息。</p>
+<p>要设计词法分析器，首先要考虑每一种类型的单词的定义，规定怎样的字符串才能构成一个单词。这里最重要的是不能有歧义。某个特定的字符串只能是某种特定类型的单词。举例来讲，要是字符串 123h 既能被解释为标识符，又能被解释为整型字面量，之后的处理就会相当麻烦。这种单词的定义方式是不可取的。</p>
+<p>词法分析的结果在数学上是一个元组，例如整数 13，可以这么表示 (13, Integer)。</p>
+<pre><code>
+var x = 10 + 2 * 4
+
+--&gt;
+
+// 数学 - 元组  Token
+
+var: Keyword
+
+a: Variable // 编程语言本身提供的具有特殊功能的词语
+
+=: Operator
+
+10: Integer
+
++: Operator
+
+2: Integer
+
+*: Operator
+
+24: Integer
+
+</code></pre><h4 id="简而言之词法分析是一个分析断句和判断词性的过程">简而言之，词法分析是一个分析断句和判断词性的过程。</h4>
+<p>字母表：语言L所允许的所有字符。</p>
+<p>串：语言L字母表的一个有穷序列（允许空串）。不可能所有的串都是语言支持的，因此我们通常用一些约束规则来描述串，其中就有正则表达式。</p>
+<h4 id="状态机">状态机：</h4>
+<p><img src="https://haohao1010.oss-cn-beijing.aliyuncs.com/pics/01.png" alt=""></p>
+<h4 id="将多个状态机合并成词法分析器">将多个状态机合并成词法分析器</h4>
+<p><img src="https://haohao1010.oss-cn-beijing.aliyuncs.com/pics/04.png" alt=""></p>
+<p>&mdash;&mdash; INSERT &mdash;&mdash;</p>
+<h4 id="测试">测试</h4>
+<p>若集成测试出现 bug 时，应当返回增加单元测试，而不是立刻修补。</p>
+<h4 id="javascript-的-this-语法">javascript 的 this 语法</h4>
+<p><a href="https://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html">this 指函数运行时所在的环境对象</a>。</p>
+<h4 id="流">流</h4>
+<p>一般情况，流需要提供获取下一个数据的接口。next() 方法读取到下一个数据之后，这个数据就相当于流过去了，因此无法重复读取。</p>
+<h3 id="未完待续">@未完待续&hellip;&hellip;</h3>
+<p>&mdash;&mdash; END</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+  
+<div class="post-archive">
+  <h2>See Also</h2>
+  <ul class="listing">
+    
+    <li><a href="/timeline/">Timeline</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/search/">Search</a></li>
+    
+  </ul>
+</div>
+
+
+
+    <div class="post-meta meta-tags">
+      
+      <ul class="clearfix">
+        
+        <li>
+          <a href='https://haohao1010.github.io/tags/Compilation-Principle'>Compilation Principle</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </article>
+   
+
+
+
+
+</div>
+</div>
+          <div id="secondary">
+  <section class="widget"><form
+  id="search"
+  action='https://haohao1010.github.io/search/'
+  method="get"
+  accept-charset="utf-8"
+  target="_blank"
+  _lpchecked="1"
+>
+  
+  <input type="text" name="q" maxlength="20" placeholder="Search" />
+  <input type="hidden" name="sitesearch" value="https://haohao1010.github.io" />
+  <button type="submit" class="submit icon-search"></button>
+</form>
+</section>
+
+  <section class="widget"><h3 class="widget-title">Recent Articles</h3>
+<ul class="widget-list">
+  
+  <li>
+    <a href="https://haohao1010.github.io/post/what-kind-of-a-person-am-I/" title="What Kind of a Person Am I">What Kind of a Person Am I</a>
+  </li>
+  
+  <li>
+    <a href="https://haohao1010.github.io/post/java-study-notes-for-beginners/" title="Java Study Notes for Beginners">Java Study Notes for Beginners</a>
+  </li>
+  
+  <li>
+    <a href="https://haohao1010.github.io/post/2020-year-end-reflection/" title="2020 Year End Reflection">2020 Year End Reflection</a>
+  </li>
+  
+  <li>
+    <a href="https://haohao1010.github.io/post/compilation-principle/" title="Introductory Notes on Compilation Principles">Introductory Notes on Compilation Principles</a>
+  </li>
+  
+</ul>
+</section>
+
+  
+
+
+  <section class="widget"><h3 class="widget-title">Classification</h3>
+<ul class="widget-list">
+  
+  <li><a href="https://haohao1010.github.io/categories/About-Life/">About Life (2)</a></li>
+  
+  <li><a href="https://haohao1010.github.io/categories/Compilation-Principle/">Compilation Principle (1)</a></li>
+  
+  <li><a href="https://haohao1010.github.io/categories/Java/">Java (1)</a></li>
+  
+</ul>
+</section>
+
+  <section class="widget"><h3 class="widget-title">Tags</h3>
+<div class="tagcloud">
+  
+  <a href="https://haohao1010.github.io/tags/About/">About</a>
+  
+  <a href="https://haohao1010.github.io/tags/About-Life/">About Life</a>
+  
+  <a href="https://haohao1010.github.io/tags/Compilation-Principle/">Compilation Principle</a>
+  
+  <a href="https://haohao1010.github.io/tags/Java/">Java</a>
+  
+  <a href="https://haohao1010.github.io/tags/TimeLine/">TimeLine</a>
+  
+</div>
+</section>
+
+  
+
+
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+  <div class="container">
+    &copy; 2021
+    <a href="https://haohao1010.github.io"
+      >Hello World By haohao1010</a
+    >. Powered by
+    <a
+      rel="nofollow noreferer noopener"
+      href="https://gohugo.io"
+      target="_blank"
+      >Hugo</a
+    >.
+    
+    
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  window.MathJax = {
+    tex2jax: {
+      inlineMath: [["$", "$"]],
+      processEscapes: true,
+    },
+  };
+</script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+  async
+></script>
+
+
+<a id="rocket" href="#top"></a>
+<script
+  type="text/javascript"
+  src='/js/totop.js?v=0.0.0'
+  async=""
+></script>
+ 
+
+
+
+
+  </body>
+</html>
