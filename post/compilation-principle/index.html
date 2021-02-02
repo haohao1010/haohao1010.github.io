@@ -104,7 +104,7 @@
     <div class="post-content"><h2 id="编译原理">编译原理</h2>
 <p>这个文档是伴随着我开发 mendax 编程语言而写的，所以会插入部分和编译原理无关的知识。</p>
 <p>所谓的编译原理，就是让计算机理解更高级的语言并执行。将问题抽象化处理，若仅局限于低级机器语言，则很难产生面向对象和函数式等编程思想。以此可以给人提供更好的思考方式。</p>
-<p>面向对象：面向对象编程——Object Oriented Programming，简称OOP，是一种程序设计思想。OOP把对象作为程序的基本单元，一个对象包含了数据和操作数据的函数。</p>
+<p>面向对象：面向对象编程——Object Oriented Programming，简称 OOP，是一种程序设计思想。OOP 把对象作为程序的基本单元，一个对象包含了数据和操作数据的函数。</p>
 <p>函数式(参考自阮一峰老师的网络日志)：</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
 数学表达式<span style="">：</span>(1 + 2) * 3 - 4
@@ -146,13 +146,14 @@ a: Variable // 编程语言本身提供的具有特殊功能的词语
 
 24: Integer
 
-</code></pre><h4 id="简而言之词法分析是一个分析断句和判断词性的过程">简而言之，词法分析是一个分析断句和判断词性的过程。</h4>
-<p>字母表：语言L所允许的所有字符。</p>
-<p>串：语言L字母表的一个有穷序列（允许空串）。不可能所有的串都是语言支持的，因此我们通常用一些约束规则来描述串，其中就有正则表达式。</p>
-<h4 id="状态机">状态机：</h4>
+</code></pre><h4 id="简而言之词法分析是一个分析断句和判断词性的过程">简而言之，词法分析是一个分析断句和判断词性的过程</h4>
+<p>字母表：语言 L 所允许的所有字符。</p>
+<p>串：语言 L 字母表的一个有穷序列（允许空串）。不可能所有的串都是语言支持的，因此我们通常用一些约束规则来描述串，其中就有正则表达式。</p>
+<h4 id="状态机">状态机</h4>
 <p><img src="https://haohao1010.oss-cn-beijing.aliyuncs.com/pics/01.png" alt=""></p>
 <h4 id="将多个状态机合并成词法分析器">将多个状态机合并成词法分析器</h4>
 <p><img src="https://haohao1010.oss-cn-beijing.aliyuncs.com/pics/04.png" alt=""></p>
+<h4 id="编译器制作过程中我们通常用正则表达式来表述词法然后用状态机来实现正则表达式">编译器制作过程中我们通常用正则表达式来表述词法，然后用状态机来实现正则表达式。</h4>
 <p>&mdash;&mdash; INSERT &mdash;&mdash;</p>
 <h4 id="测试">测试</h4>
 <p>若集成测试出现 bug 时，应当返回增加单元测试，而不是立刻修补。</p>
@@ -160,9 +161,23 @@ a: Variable // 编程语言本身提供的具有特殊功能的词语
 <p><a href="https://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html">this 指函数运行时所在的环境对象</a>。</p>
 <h4 id="流">流</h4>
 <p>一般情况，流需要提供获取下一个数据的接口。next() 方法读取到下一个数据之后，这个数据就相当于流过去了，因此无法重复读取。</p>
-<h3 id="未完待续">@未完待续&hellip;&hellip;</h3>
+<hr>
+<p>在 JavaScript 中如果一段代码运行超过一次，那么就称为 warm。如果一个函数开始变得 warmer（注：即运行更多次），JIT 将把这段代码送到编译器中编译并且保存一个编译后的版本。下一次同样代码执行的时候，引擎会跳过翻译过程直接使用编译后的版本。</p>
 <p>&mdash;&mdash; END</p>
-<!-- raw HTML omitted -->
+<h2 id="语法分析">语法分析</h2>
+<h4 id="抽象语法树">抽象语法树</h4>
+<p><img src="https://haohao1010.oss-cn-beijing.aliyuncs.com/pics/05.png" alt=""></p>
+<p>1 + 2 * 3 + 4 的表达式的抽象语法树</p>
+<p><img src="https://haohao1010.oss-cn-beijing.aliyuncs.com/pics/06.png" alt=""></p>
+<h4 id="上下文无关文法">上下文无关文法</h4>
+<p>在不需要理解某个语言的前提下，给定任意这门语言的句子，便可以得到一个合理的抽象语法树。</p>
+<p><code>产生式：Expr -&gt; Expr + 1 | 1</code></p>
+<p>利用递归法求抽象语法树时，例如上式，有，</p>
+<pre><code>
+非终结符（递归）函数：parseExpr（生成一个叶子结点）
+终结符：parseNumber（生成一个叶子结点）
+
+</code></pre><h3 id="未完待续">@未完待续&hellip;&hellip;</h3>
 </div>
 
     
