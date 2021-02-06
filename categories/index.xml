@@ -6,19 +6,10 @@
     <description>Recent content in Categories on Hello World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 24 Jan 2021 14:51:56 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jan 2021 14:22:14 +0800</lastBuildDate>
     
 	<atom:link href="https://haohao1010.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About Life</title>
-      <link>https://haohao1010.github.io/categories/About-Life/</link>
-      <pubDate>Sun, 24 Jan 2021 14:51:56 +0800</pubDate>
-      
-      <guid>https://haohao1010.github.io/categories/About-Life/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Java</title>
@@ -26,6 +17,15 @@
       <pubDate>Tue, 19 Jan 2021 14:22:14 +0800</pubDate>
       
       <guid>https://haohao1010.github.io/categories/Java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About Life</title>
+      <link>https://haohao1010.github.io/categories/About-Life/</link>
+      <pubDate>Wed, 13 Jan 2021 13:38:40 +0800</pubDate>
+      
+      <guid>https://haohao1010.github.io/categories/About-Life/</guid>
       <description></description>
     </item>
     
