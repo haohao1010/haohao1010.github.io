@@ -155,8 +155,6 @@ a: Variable // 编程语言本身提供的具有特殊功能的词语
 <p><img src="https://haohao1010.oss-cn-beijing.aliyuncs.com/pics/04.png" alt=""></p>
 <h4 id="编译器制作过程中我们通常用正则表达式来表述词法然后用状态机来实现正则表达式">编译器制作过程中我们通常用正则表达式来表述词法，然后用状态机来实现正则表达式。</h4>
 <p>&mdash;&mdash; INSERT &mdash;&mdash;</p>
-<h4 id="测试">测试</h4>
-<p>若集成测试出现 bug 时，应当返回增加单元测试，而不是立刻修补。</p>
 <h4 id="javascript-的-this-语法">javascript 的 this 语法</h4>
 <p><a href="https://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html">this 指函数运行时所在的环境对象</a>。</p>
 <h4 id="流">流</h4>
@@ -171,14 +169,8 @@ a: Variable // 编程语言本身提供的具有特殊功能的词语
 <p><img src="https://haohao1010.oss-cn-beijing.aliyuncs.com/pics/06.png" alt=""></p>
 <h4 id="上下文无关文法">上下文无关文法</h4>
 <p>在不需要理解某个语言的前提下，给定任意这门语言的句子，便可以得到一个合理的抽象语法树。</p>
-<p><code>产生式：Expr -&gt; Expr + 1 | 1</code></p>
-<p>利用递归法求抽象语法树时，例如上式，有，</p>
-<pre><code>
-非终结符（递归）函数：parseExpr（生成一个叶子结点）
-终结符：parseNumber（生成一个叶子结点）
-
-</code></pre><h2 id="左递归的处理">左递归的处理</h2>
-<h3 id="未完待续">@未完待续&hellip;&hellip;</h3>
+<p>非终结符（递归）函数：parseExpr（生成一个非叶子结点）
+终结符：parseNumber（生成一个叶子结点）</p>
 </div>
 
     
